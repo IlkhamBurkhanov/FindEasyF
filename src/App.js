@@ -1,9 +1,13 @@
+import React from "react";
+import Navbar from "./Nav/Navbar";
 
-import './App.css';
+
 
 function App() {
   return (
-    <h2>FINDEASY</h2>
+    <div>
+      <Navbar/>
+    </div>
   );
 }
 
