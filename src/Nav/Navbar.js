@@ -1,11 +1,11 @@
 import React from 'react';
-import { Input } from "../components/ui/input"
 import {
-    Avatar,
-    AvatarFallback,
-    AvatarImage,
-  } from "../components/ui/avatar"
-  import { Button } from "../components/ui/button"
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "../components/ui/avatar"
+import { Button } from "../components/ui/button"
+import { Input } from "../components/ui/input"
  
 
   import { Label } from "../components/ui/label"
@@ -24,8 +24,8 @@ const Navbar = () => {
     return (
         <div>
            <div className=' flex my-5 px-20 justify-between items-center gap-10'>
-           <h2 className=' text-gray-700 text-xl font-semibold'>FINDEASY</h2>
-           <Input type="text" placeholder="Search anything" />
+           <a href='/' className=''><h2 className=' text-gray-700 text-xl font-semibold'>FINDEASY</h2></a>
+           <Input className=" md:block hidden" type="text" placeholder="Search anything" />
            <Sheet className=" text-black">
        <SheetTrigger asChild>
         <Button variant="outline">Login</Button>
