@@ -5,6 +5,7 @@ import Main from "./Main/Main";
 // import Categories from "./Categories/Categories";
 import Footer from "./Footer/Footer";
 import CategoryPage from "./CategoryPage/CategoryPage"; // Import the CategoryPage component
+import SearchPage from "./SearchPage/SearchPage";
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
         <Route path="/" exact element={<Main/>} /> {/* Use exact to match the exact path */}
         {/* <Route path="/categories" component={Categories} /> */}
         <Route path="/category/:categoryId" element={<CategoryPage/>} /> {/* Define dynamic route */}
-      </Routes>
+        <Route path="/search/:searchName" element={<SearchPage/>} />
+        </Routes>
       
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

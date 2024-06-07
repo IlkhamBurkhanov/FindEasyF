@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Avatar,
   AvatarFallback,
@@ -19,13 +19,21 @@ import { Input } from "../components/ui/input"
     SheetTitle,
     SheetTrigger,
   } from "../components/ui/sheet"
+import { Link } from 'react-router-dom';
+  
 const Navbar = () => {
-    
+  const [inputSearch, setInputSearch] = useState("")
+  
     return (
         <div>
            <div className=' flex my-5 px-20 justify-between items-center gap-10'>
            <a href='/' className=''><h2 className=' text-gray-700 text-xl font-semibold'>FINDEASY</h2></a>
-           <Input className=" md:block hidden" type="text" placeholder="Search anything" />
+           <Input onChange={(e)=> setInputSearch(e.target.value)} className=" md:block hidden" type="text" placeholder="Search anything" />
+           <Link to={`/search/${inputSearch}`}>
+            <Button 
+          //  onClick={handleSubmit(inputSearch)}
+          >Search</Button>
+          </Link>
            <Sheet className=" text-black">
        <SheetTrigger asChild>
         <Button variant="outline">Login</Button>

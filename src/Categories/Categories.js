@@ -40,8 +40,8 @@ function Categories(){
         <div className="container mx-auto px-4 py-8">
         <h1 className="md:text-2xl text-xl font-bold md:mb-8 mb-4">Categories</h1>
         <div className="flex flex-wrap justify-center -mx-4">
-          {categories?.map(category => (
-            <CategoryCard key={category?.id} category={category} />
+          {categories?.map((category, index )=> (
+            <CategoryCard key={index} category={category} />
           ))}
         </div>
       </div>
